@@ -1,0 +1,25 @@
+.Search {
+    width: 100px;
+    height: 20px;
+    outline: none;
+    transition: all 0.3s ease-out;
+    background-color: rgba(0, 0, 255, 0.233);
+    border: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow:
+    0 0 5px rgb(8, 47, 73),
+    0 0 10px rgb(2, 174, 241);
+}
+
+.Search::placeholder {
+    color: rgba(255, 255, 255, 0.486);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.Search:focus {
+    width: 200px;
+}

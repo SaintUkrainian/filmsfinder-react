@@ -1,0 +1,33 @@
+.Rect1 {
+    margin: 10px;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3px;
+
+}
+
+.Rect2 {
+    position: relative;
+    width: 11px;
+    height: 4px;
+    background: #FFFFFF;
+}
+
+.Rect3 {
+    position: relative;
+    width: 33px;
+    height: 4px;
+    background: #FFFFFF;
+}
+
+.Rect4 {
+    position: relative;
+    width: 22px;
+    height: 4px;
+    background: #FFFFFF;
+}
