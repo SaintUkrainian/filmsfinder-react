@@ -2,10 +2,11 @@
     margin: 0;
     height: 100%;
     width: 400px;
-    background-color: rgb(40, 38, 153);
+    background-color: rgb(17, 16, 83);
     position: fixed;
     transition: all;
     z-index: 150;
+    color: rgb(103, 125, 248);
 }
 
 
