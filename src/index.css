@@ -2,8 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to right, rgba(4, 24, 51, 0.6),rgba(4, 24, 51, 0.6)), url("./assets/images/background.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(4, 24, 51, 0.699),rgba(4, 24, 51, 0.699)), url("./assets/images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+
 }
 
 .Button {

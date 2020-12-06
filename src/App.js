@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 
 import "./App.css";
 
 import Nav from "./components/NavComponents/Nav";
+import * as actions from "./store/actions/genres";
 
 const App = (props) => {
     const [showSideDrawer, setShowSideDrawer] = useState(false);
+    const {fetchGenres} = props;
+
+    useEffect(() => {
+        fetchGenres();
+    }, [fetchGenres]);
 
     const closeModal = () => {
         setShowSideDrawer(false);
@@ -22,4 +29,10 @@ const App = (props) => {
     );
 };
 
-export default App;
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchGenres: () => dispatch(actions.fetchGenres()),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(App);
