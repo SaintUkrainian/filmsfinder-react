@@ -4,10 +4,10 @@ const initialState = {
 }
 
 
-const selectedMovie = (state = initialState, action) => {
+const selectedGenre = (state = initialState, action) => {
 
     switch(action.type) {
-        case "": return {
+        case "set_genre": return {
             id: action.id,
             name: action.name,
         };
@@ -16,4 +16,4 @@ const selectedMovie = (state = initialState, action) => {
 }
 
 
-export default selectedMovie;
+export default selectedGenre;

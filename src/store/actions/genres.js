@@ -17,7 +17,7 @@ export const fetchGenres = () => {
         )
         .then((response) => {
             console.log(response);
-            dispatch(setGenres(response.data));
+            dispatch(setGenres(response.data.genres));
         });
     }
 }

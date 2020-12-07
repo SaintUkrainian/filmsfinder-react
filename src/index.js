@@ -8,12 +8,14 @@ import { createStore, compose, combineReducers, applyMiddleware } from "redux";
 import selectedMovie from "./store/reducers/selectedMovie";
 import genres from "./store/reducers/genres";
 import thunk from "redux-thunk";
+import selectedGenre from "./store/reducers/selectedGenre";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
     selectedMovie: selectedMovie,
     genres: genres,
+    selectedGenre: selectedGenre,
 });
 
 const store = createStore(

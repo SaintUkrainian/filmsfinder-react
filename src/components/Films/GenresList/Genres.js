@@ -1,23 +1,34 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import { connect } from "react-redux";
 import Spinner from "../../UI/Spinner/Spinner";
-import "./Genres.css"
+import "./Genres.css";
+import * as actions from "../../../store/actions/selectedGenre";
 
 const Genres = (props) => {
-
     console.log(props.genres);
-    return (
-        <div className="Genres">
-            {!props.genres ? <Spinner /> : <h1>Fetched!</h1>}
-        </div>
-    );
+    let listOfGenres;
+    if (props.genres) {
+        listOfGenres = props.genres.map((item) => (
+            <button key={item.id} className="Genre" onClick={() => props.setGenre(item)}>
+                {item.name}
+            </button>
+        ));
+    } else {
+        listOfGenres = <Spinner />;
+    }
+    return <div className="Genres">{listOfGenres}</div>;
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         genres: state.genres.genres,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setGenre: (genre) => dispatch(actions.setGenre(genre))
     }
 }
 
-export default connect(mapStateToProps)(Genres);
+export default connect(mapStateToProps, mapDispatchToProps)(Genres);
