@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/filmsfinder-react/static/css/main.b486fd1b.chunk.css",
+    "main.js": "/filmsfinder-react/static/js/main.09a0e6ff.chunk.js",
+    "main.js.map": "/filmsfinder-react/static/js/main.09a0e6ff.chunk.js.map",
+    "runtime-main.js": "/filmsfinder-react/static/js/runtime-main.f5274031.js",
+    "runtime-main.js.map": "/filmsfinder-react/static/js/runtime-main.f5274031.js.map",
+    "static/js/2.d7ce1545.chunk.js": "/filmsfinder-react/static/js/2.d7ce1545.chunk.js",
+    "static/js/2.d7ce1545.chunk.js.map": "/filmsfinder-react/static/js/2.d7ce1545.chunk.js.map",
+    "index.html": "/filmsfinder-react/index.html",
+    "static/css/main.b486fd1b.chunk.css.map": "/filmsfinder-react/static/css/main.b486fd1b.chunk.css.map",
+    "static/js/2.d7ce1545.chunk.js.LICENSE.txt": "/filmsfinder-react/static/js/2.d7ce1545.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/filmsfinder-react/static/media/background.cc41283c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5274031.js",
+    "static/js/2.d7ce1545.chunk.js",
+    "static/css/main.b486fd1b.chunk.css",
+    "static/js/main.09a0e6ff.chunk.js"
+  ]
+}
