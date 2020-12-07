@@ -5,9 +5,7 @@ import "./Search.css"
 const Search = (props) => {
 
     return (
-        <CSSTransition classNames="grow">
             <input className="Search" type="text" placeholder="Find a movie..."/>
-        </CSSTransition>
     );
 }
 

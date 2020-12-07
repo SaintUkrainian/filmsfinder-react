@@ -21,6 +21,7 @@ const Films = (props) => {
     if (!props.fetching) {
         films = props.movies.map((movie) => (
             <Film
+                key={movie.id}
                 imageUrl={movie.poster_path}
                 title={movie.title}
                 select={() => props.setSelectedMovie(movie.id, movie.title)}

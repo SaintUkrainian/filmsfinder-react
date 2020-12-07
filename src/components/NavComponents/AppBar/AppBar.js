@@ -4,6 +4,7 @@ import "./AppBar.css";
 import MenuIcon from "./MenuIcon/MenuIcon";
 import Search from "../../Search/Search";
 import Logo from "../SideDrawer/Logo/Logo";
+import SearchIcon from "./SearchIcon/SearchIcon";
 import { connect } from "react-redux";
 
 const AppBar = (props) => {
@@ -13,6 +14,7 @@ const AppBar = (props) => {
             <div className="MenuSearch">
                 <MenuIcon showModal={props.showSideDrawer} />
                 <Search />
+                <SearchIcon />
             </div>
             <h1 className="genre">{props.genre}</h1>
             <h2 className="neon">FilmsFinder React version</h2>

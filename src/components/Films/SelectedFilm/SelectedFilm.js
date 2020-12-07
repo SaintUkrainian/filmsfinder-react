@@ -21,7 +21,7 @@ const SelectedFilm = (props) => {
                 <div className="description">
                     <h1>{props.filmInfo.title}</h1>
                     <p><strong>Release date: </strong>{props.filmInfo.release_date}</p>
-                    <p><strong>Budget: </strong>${props.filmInfo.budget == 0 ? "ecret" : props.filmInfo.budget}</p>
+                    <p><strong>Budget: </strong>${props.filmInfo.budget === 0 ? "ecret" : props.filmInfo.budget}</p>
                     <p><strong>Minutes long: </strong>{props.filmInfo.runtime}</p>
                     <p>
                        <strong>Genres: </strong> 
@@ -30,6 +30,7 @@ const SelectedFilm = (props) => {
                             .join(", ")}
                     </p>
                         <p><strong>Description:</strong> {props.filmInfo.overview}</p>
+                        <a href={props.filmInfo.homepage} style={{color: "white", marginBottom: 3, marginLeft: 2}}>Visit its official homepage!</a>
                 </div>
             </React.Fragment>
         );

@@ -1,0 +1,12 @@
+.SearchIcon {
+    margin: auto;
+    margin-left: 4px;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.SearchIcon:hover {
+    background-color: rgb(9, 35, 107);
+    border-radius: 30px;
+}
