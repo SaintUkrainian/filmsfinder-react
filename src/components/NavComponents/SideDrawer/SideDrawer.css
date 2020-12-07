@@ -6,6 +6,7 @@
     position: fixed;
     transition: all;
     z-index: 150;
+    top: 0;
     color: rgb(103, 125, 248);
     border-right: 2px solid white;
     box-shadow: 0 2px 3px white,

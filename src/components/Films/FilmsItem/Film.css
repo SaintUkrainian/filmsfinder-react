@@ -1,0 +1,20 @@
+.Film {
+    color: white;
+    margin: 20px;
+}
+
+.Film img {
+    border-radius: 15px;
+    height: 400px;
+    width: 280px;
+    transition: all 0.2s ease-out;
+}
+
+.Film img:hover {
+    box-shadow: 0 0px 3px rgb(93, 69, 228),
+    0 0px 6px  rgb(93, 69, 228),
+    0 0px 9px  rgb(93, 69, 228),
+    0 0px 12px  rgb(93, 69, 228),
+    0 0px 15px  rgb(93, 69, 228),
+    0 0px 18px  rgb(93, 69, 228);
+}

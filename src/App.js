@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import "./App.css";
 
 import Nav from "./components/NavComponents/Nav";
+import Films from "./components/Films/Films/Films";
+import SelectedFilm from "./components/Films/SelectedFilm/SelectedFilm";
 import * as actions from "./store/actions/genres";
 
 const App = (props) => {
@@ -25,6 +27,8 @@ const App = (props) => {
     return (
         <div className="App">
             <Nav show={showSideDrawer} showSideDrawer={showModal} closeSideDrawer={closeModal}/>
+            <SelectedFilm />
+            <Films />
         </div>
     );
 };

@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AppBar.css";
 
 import MenuIcon from "./MenuIcon/MenuIcon";
 import Search from "../../Search/Search";
 import Logo from "../SideDrawer/Logo/Logo";
+import { connect } from "react-redux";
 
-export default function AppBar(props) {
+const AppBar = (props) => {
+
     return (
         <div className="AppBar">
             <div className="MenuSearch">
                 <MenuIcon showModal={props.showSideDrawer} />
                 <Search />
             </div>
+            <h1 className="genre">{props.genre}</h1>
             <h2 className="neon">FilmsFinder React version</h2>
             <div className="logo">
                 <Logo />
@@ -19,3 +22,13 @@ export default function AppBar(props) {
         </div>
     );
 }
+
+const mapStateToProps = (state) => {
+    return {
+        genre: state.selectedGenre.name,
+    };
+};
+
+
+export default connect(mapStateToProps)(AppBar);
+

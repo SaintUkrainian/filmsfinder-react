@@ -1,0 +1,76 @@
+.SelectedFilm {
+    display: flex;
+    position: fixed;
+    z-index: 150;
+    width: 100%;
+    height: 80%;
+    transition: all 0.3s ease-out;
+    margin: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    width: 80%;
+    background-color: rgba(0, 0, 255, 0.575);
+    border-radius: 10px;
+}
+
+.container img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: 100%;
+    text-align: start;
+    margin-left: 5px;
+    font-size: large;
+}
+
+.close-btn {
+    height: 100px;
+    width: fit-content; 
+}
+
+.film-enter {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-out;
+}
+
+.film-enter-active {
+    transform: translateY(0);
+}
+
+.film-exit-active {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-out;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .description {
+        overflow: scroll;
+        height: 300px;
+        margin-left: 2px;
+    }
+    .container img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .SelectedFilm img {
+        width: 100%;
+        height: 300px;
+    }
+}

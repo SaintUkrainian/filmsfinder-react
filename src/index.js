@@ -9,10 +9,12 @@ import selectedMovie from "./store/reducers/selectedMovie";
 import genres from "./store/reducers/genres";
 import thunk from "redux-thunk";
 import selectedGenre from "./store/reducers/selectedGenre";
+import movies from "./store/reducers/movies";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
+    movies: movies,
     selectedMovie: selectedMovie,
     genres: genres,
     selectedGenre: selectedGenre,

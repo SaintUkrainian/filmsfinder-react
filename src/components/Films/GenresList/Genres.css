@@ -15,7 +15,12 @@
     color: white;
     padding: 0;
     font-size: 20px;
-    margin: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.Genre:hover {
+    color: #ccc;
 }
 
 @media (max-width: 500px) {
