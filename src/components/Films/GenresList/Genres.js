@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Spinner from "../../UI/Spinner/Spinner";
 import "./Genres.css";
 import * as actions from "../../../store/actions/movies";
-import {setGenre} from "../../../store/actions/selectedGenre";
 
 const Genres = (props) => {
     console.log(props.genres);
