@@ -5,6 +5,7 @@ import CSSTransition from "react-transition-group/CSSTransition";
 import * as actions from "../../../store/actions/selectedMovie";
 import "./SelectedFilm.css";
 import Spinner from "../../UI/Spinner/Spinner";
+import notFoundImage from "../../../assets/images/get-image.jfif";
 
 const SelectedFilm = (props) => {
     let filmDesc;
@@ -13,24 +14,50 @@ const SelectedFilm = (props) => {
             <React.Fragment>
                 <img
                     src={
-                        "https://image.tmdb.org/t/p/w500/" +
                         props.filmInfo.poster_path
+                            ? "https://image.tmdb.org/t/p/w500/" +
+                              props.filmInfo.poster_path
+                            : notFoundImage
                     }
                     alt="poster"
                 ></img>
                 <div className="description">
                     <h1>{props.filmInfo.title}</h1>
-                    <p><strong>Release date: </strong>{props.filmInfo.release_date}</p>
-                    <p><strong>Budget: </strong>${props.filmInfo.budget === 0 ? "ecret" : props.filmInfo.budget}</p>
-                    <p><strong>Minutes long: </strong>{props.filmInfo.runtime}</p>
                     <p>
-                       <strong>Genres: </strong> 
+                        <strong>Release date: </strong>
+                        {props.filmInfo.release_date}
+                    </p>
+                    <p>
+                        <strong>Budget: </strong>$
+                        {props.filmInfo.budget === 0
+                            ? "ecret"
+                            : props.filmInfo.budget}
+                    </p>
+                    <p>
+                        <strong>Minutes long: </strong>
+                        {props.filmInfo.runtime}
+                    </p>
+                    <p>
+                        <strong>Genres: </strong>
                         {props.filmInfo.genres
                             .map((obj) => obj.name)
                             .join(", ")}
                     </p>
-                        <p><strong>Description:</strong> {props.filmInfo.overview}</p>
-                        <a href={props.filmInfo.homepage} style={{color: "white", marginBottom: 3, marginLeft: 2}}>Visit its official homepage!</a>
+                    <p>
+                        <strong>Description:</strong> {props.filmInfo.overview}
+                    </p>
+                    {props.filmInfo.homepage ? (
+                        <a
+                            href={props.filmInfo.homepage}
+                            style={{
+                                color: "white",
+                                marginBottom: 3,
+                                marginLeft: 2,
+                            }}
+                        >
+                            Visit its official homepage!
+                        </a>
+                    ) : null}
                 </div>
             </React.Fragment>
         );

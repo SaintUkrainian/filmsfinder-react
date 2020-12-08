@@ -1,12 +1,21 @@
-import React from "react";
-import CSSTransition from "react-transition-group/CSSTransition";
-import "./Search.css"
+import React, { useState } from "react";
+import "./Search.css";
+import SearchIcon from "../NavComponents/AppBar/SearchIcon/SearchIcon";
 
 const Search = (props) => {
-
+    const [input, setInput] = useState("");
     return (
-            <input className="Search" type="text" placeholder="Find a movie..."/>
+        <React.Fragment>
+            <input
+                className="Search"
+                type="text"
+                placeholder="Find a movie..."
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+            />
+            <SearchIcon inputFilm={input}/>
+        </React.Fragment>
     );
-}
+};
 
 export default Search;

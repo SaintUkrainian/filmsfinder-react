@@ -19,14 +19,24 @@ const Films = (props) => {
     console.log(props.fetching);
     console.log(props.movies);
     if (!props.fetching) {
-        films = props.movies.map((movie) => (
-            <Film
-                key={movie.id}
-                imageUrl={movie.poster_path}
-                title={movie.title}
-                select={() => props.setSelectedMovie(movie.id, movie.title)}
-            />
-        ));
+        if (props.movies.length > 0) {
+            films = props.movies.map((movie) => (
+                <Film
+                    key={movie.id}
+                    imageUrl={movie.poster_path}
+                    title={movie.title}
+                    select={() => props.setSelectedMovie(movie.id, movie.title)}
+                />
+            ));
+        } else {
+            films = (
+                // <h1 style={{ color: "white" }}>
+                //     Sorry, nothing was found by <strong>{props.genre}</strong>
+                // </h1>
+                <Spinner />
+            );
+        }
+
         console.log("Fetched");
     } else {
         films = <Spinner />;

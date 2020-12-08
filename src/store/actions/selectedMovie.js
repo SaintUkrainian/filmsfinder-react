@@ -26,7 +26,7 @@ export const setSelectedMovie = (id, title) => {
                     id +
                     "?api_key=58af3dc3b19432c261816f7a48688477&language=en-US"
             )
-            .then(response => {
+            .then((response) => {
                 console.log(response);
                 dispatch(setMovie(id, title, response.data));
             });
