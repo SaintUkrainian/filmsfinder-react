@@ -19,21 +19,31 @@ const Films = (props) => {
     console.log(props.fetching);
     console.log(props.movies);
     if (!props.fetching) {
-        if (props.movies.length > 0) {
-            films = props.movies.map((movie) => (
-                <Film
-                    key={movie.id}
-                    imageUrl={movie.poster_path}
-                    title={movie.title}
-                    select={() => props.setSelectedMovie(movie.id, movie.title)}
-                />
-            ));
+        if (!props.error) {
+            if (props.movies.length > 0) {
+                films = props.movies.map((movie) => (
+                    <Film
+                        key={movie.id}
+                        imageUrl={movie.poster_path}
+                        title={movie.title}
+                        select={() =>
+                            props.setSelectedMovie(movie.id, movie.title)
+                        }
+                    />
+                ));
+            } else {
+                films = (
+                    <h1 style={{ color: "white" }}>
+                        Sorry, nothing was found by{" "}
+                        <strong>{props.genre}</strong>
+                    </h1>
+                );
+            }
         } else {
             films = (
-                // <h1 style={{ color: "white" }}>
-                //     Sorry, nothing was found by <strong>{props.genre}</strong>
-                // </h1>
-                <Spinner />
+                <h1 style={{ color: "white", textDecoration: "underline" }}>
+                    An Error occurred!
+                </h1>
             );
         }
 
@@ -50,6 +60,7 @@ const mapStateToProps = (state) => {
         movies: state.movies.list,
         fetching: state.movies.fetching,
         genre: state.selectedGenre.name,
+        error: state.movies.error,
     };
 };
 

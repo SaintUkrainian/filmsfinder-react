@@ -8,6 +8,14 @@ const setMovies = (movies) => {
     };
 };
 
+const setError = (error) => {
+    return {
+        type:"set_error",
+        error: error,
+        fetching: false,
+    }
+}
+
 const startFetching = () => {
     return {
         type: "start_fetching",
@@ -21,8 +29,9 @@ export const fetchMovies = () => {
         axios.get(
             "https://api.themoviedb.org/3/movie/popular?api_key=58af3dc3b19432c261816f7a48688477&language=en-US&page=1"
         ).then(response => {
-            console.log(response.data.results);
             dispatch(setMovies(response.data.results));
+        }).catch(error => {
+            dispatch(setError(error));
         });
     };
 };
@@ -37,8 +46,9 @@ export const fetchByGenre = (genre) => {
                     genre.id
             )
             .then((response) => {
-                console.log(response);
                 dispatch(setMovies(response.data.results));
+            }).catch(error => {
+                dispatch(setError(error));
             });
     };
 };
@@ -54,6 +64,8 @@ export const findMovies = (title) => {
             )
             .then((response) => {
                 dispatch(setMovies(response.data.results));
+            }).catch(error => {
+                dispatch(setError(error));
             });
     };
 };

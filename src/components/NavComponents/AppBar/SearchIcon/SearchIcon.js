@@ -4,7 +4,7 @@ import { fetchMovies, findMovies } from "../../../../store/actions/movies";
 
 import "./SearchIcon.css";
 const searchIcon = (props) => {
-    console.log(props.inputFilm);
+    
     if(props.inputFilm.trim() === "") {
        props.fetchDefaultMovies();
     }

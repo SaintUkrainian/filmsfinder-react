@@ -16,7 +16,6 @@ const startFetching = () => {
 };
 
 export const setSelectedMovie = (id, title) => {
-    console.log(id, title);
 
     return (dispatch) => {
         dispatch(startFetching());
@@ -27,7 +26,6 @@ export const setSelectedMovie = (id, title) => {
                     "?api_key=58af3dc3b19432c261816f7a48688477&language=en-US"
             )
             .then((response) => {
-                console.log(response);
                 dispatch(setMovie(id, title, response.data));
             });
     };

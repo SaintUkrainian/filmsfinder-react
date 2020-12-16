@@ -16,7 +16,6 @@ export const fetchGenres = () => {
             "https://api.themoviedb.org/3/genre/movie/list?api_key=58af3dc3b19432c261816f7a48688477&language=en-US"
         )
         .then((response) => {
-            console.log(response);
             dispatch(setGenres(response.data.genres));
         });
     }
