@@ -12,12 +12,9 @@ const Films = (props) => {
     const { fetchMovies } = props;
 
     useEffect(() => {
-        console.log("fetching movies");
         fetchMovies();
     }, [fetchMovies]);
 
-    console.log(props.fetching);
-    console.log(props.movies);
     if (!props.fetching) {
         if (!props.error) {
             if (props.movies.length > 0) {
@@ -46,11 +43,8 @@ const Films = (props) => {
                 </h1>
             );
         }
-
-        console.log("Fetched");
     } else {
         films = <Spinner />;
-        console.log("Spinner");
     }
     return <div className="Films">{films}</div>;
 };

@@ -5,7 +5,6 @@ import "./Genres.css";
 import * as actions from "../../../store/actions/movies";
 
 const Genres = (props) => {
-    console.log(props.genres);
     let listOfGenres;
     if (props.genres) {
         listOfGenres = props.genres.map((item) => (
