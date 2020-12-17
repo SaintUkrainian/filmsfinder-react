@@ -8,17 +8,34 @@ const Genres = (props) => {
     let listOfGenres;
     if (props.genres) {
         listOfGenres = props.genres.map((item) => (
-            <button key={item.id} className="Genre" onClick={() => props.setGenre(item)}>
+            <button
+                key={item.id}
+                className="Genre"
+                onClick={() => {
+                    props.setGenre(item);
+                    props.closeSideDrawer();
+                }}
+            >
                 {item.name}
             </button>
         ));
     } else {
         listOfGenres = <Spinner />;
     }
-    return <div className="Genres">
-        <h3 style={{textDecoration: "underline", color: "white", margin: 0}}>Search by genres:</h3>
-        {listOfGenres}
-        </div>;
+    return (
+        <div className="Genres">
+            <h3
+                style={{
+                    textDecoration: "underline",
+                    color: "white",
+                    margin: 0,
+                }}
+            >
+                Search by genres:
+            </h3>
+            {listOfGenres}
+        </div>
+    );
 };
 
 const mapStateToProps = (state) => {
@@ -29,9 +46,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setGenre: (genre) =>
-            dispatch(actions.fetchByGenre(genre)),
-    }
-}
+        setGenre: (genre) => dispatch(actions.fetchByGenre(genre)),
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Genres);

@@ -18,7 +18,7 @@ const SideDrawer = (props) => {
                 <Logo />
                 <h1>Good old FilmsFinder, but made with React.js</h1>
                 <hr></hr>
-                <Genres />
+                <Genres closeSideDrawer={props.closeSideDrawer}/>
             </div>
         </CSSTransition>
     );

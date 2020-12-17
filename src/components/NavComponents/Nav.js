@@ -7,7 +7,7 @@ import AppBar from "./AppBar/AppBar";
 const Nav = (props) => {
     return (
         <React.Fragment>
-            <SideDrawer show={props.show} />
+            <SideDrawer show={props.show} closeSideDrawer={props.closeSideDrawer}/>
             <Backdrop closeModal={props.closeSideDrawer} show={props.show}/>
             <AppBar showSideDrawer={props.showSideDrawer}/>
         </React.Fragment>
