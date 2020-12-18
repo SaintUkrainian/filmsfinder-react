@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/filmsfinder-react/static/css/main.72347b2b.chunk.css",
-    "main.js": "/filmsfinder-react/static/js/main.53c67036.chunk.js",
-    "main.js.map": "/filmsfinder-react/static/js/main.53c67036.chunk.js.map",
+    "main.js": "/filmsfinder-react/static/js/main.e539e79c.chunk.js",
+    "main.js.map": "/filmsfinder-react/static/js/main.e539e79c.chunk.js.map",
     "runtime-main.js": "/filmsfinder-react/static/js/runtime-main.f5274031.js",
     "runtime-main.js.map": "/filmsfinder-react/static/js/runtime-main.f5274031.js.map",
     "static/js/2.3ead8551.chunk.js": "/filmsfinder-react/static/js/2.3ead8551.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f5274031.js",
     "static/js/2.3ead8551.chunk.js",
     "static/css/main.72347b2b.chunk.css",
-    "static/js/main.53c67036.chunk.js"
+    "static/js/main.e539e79c.chunk.js"
   ]
 }
