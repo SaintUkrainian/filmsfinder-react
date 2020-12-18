@@ -8,8 +8,8 @@ import Spinner from "../../UI/Spinner/Spinner";
 import notFoundImage from "../../../assets/images/get-image.jfif";
 
 const SelectedFilm = (props) => {
-    let filmDesc;
-    if (props.filmInfo) {
+    let filmDesc = null;
+    if (props.id) {
         filmDesc = (
             <React.Fragment>
                 <img
@@ -62,7 +62,7 @@ const SelectedFilm = (props) => {
             </React.Fragment>
         );
     } else {
-        filmDesc = <Spinner />;
+        filmDesc = <h1>:(</h1>
     }
     return (
         <CSSTransition
