@@ -17,6 +17,9 @@
     width: 80%;
     background-color: rgba(17, 16, 83, 0.705);
     border-radius: 10px;
+    box-shadow: 0 0 2px white,
+        0 0 4px white,
+        0 0 12px white;
 }
 
 .container img {
@@ -57,17 +60,26 @@
 @media (max-width: 500px) {
     .container {
         flex-direction: column;
+        width: 70%;
+        box-shadow: 0 0 2px white,
+        0 0 4px white,
+        0 0 12px white;
     }
 
     .description {
         overflow: scroll;
         height: 300px;
         margin-left: 2px;
+        width: 100%;
     }
     .container img {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0px;
+    }
+    .SelectedFilm {
+        width: 100%;
+        margin: auto;
     }
 
     .SelectedFilm img {

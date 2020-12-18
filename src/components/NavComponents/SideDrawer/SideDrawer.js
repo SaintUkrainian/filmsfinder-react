@@ -19,6 +19,7 @@ const SideDrawer = (props) => {
                 <h1>Good old FilmsFinder, but made with React.js</h1>
                 <hr></hr>
                 <Genres closeSideDrawer={props.closeSideDrawer}/>
+                <p className="help">Scroll down to see more genres!</p>
             </div>
         </CSSTransition>
     );

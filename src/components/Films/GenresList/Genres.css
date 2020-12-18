@@ -10,22 +10,34 @@
 .Genre {
     border: none;
     background: none;
-    outline: none;
-    border-bottom: 2px solid white;
     color: white;
-    padding: 0;
+    width: 200px;
+    outline: none;
+    padding: 5px 0;
     font-size: 20px;
     margin: 5px;
     cursor: pointer;
 }
 
 .Genre:hover {
-    color: #ccc;
+    background: rgba(83, 73, 179, 0.514);
+    transition: all 0.2s ease-out;
+    box-shadow: 0 0 2px white,
+    0 0 4px white,
+    0 0 8px white,
+    0 0 12px white;
+    border-radius: 10px;
 }
 
 @media (max-width: 500px) {
     .Genres {
         overflow: scroll;
         height: 60%;
+    }
+    .Genre {
+        background: rgba(83, 73, 179, 0.514);
+        box-shadow: 0 0 2px white,
+        0 0 4px white;
+        border-radius: 10px;
     }
 }

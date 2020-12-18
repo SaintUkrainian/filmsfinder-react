@@ -14,6 +14,10 @@
     0 2px 20px white;
 }
 
+.help {
+    display: none;
+}
+
 
 .slider-enter-active {
     animation: appear 0.5s ease-out;
@@ -51,5 +55,10 @@
 @media (max-width: 500px) {
     .SideDrawer {
         width: 300px;
+    }
+    .help {
+        display: block;
+        color: white;
+        font-weight: bold;
     }
 }
