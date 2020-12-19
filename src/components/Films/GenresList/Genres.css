@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 80%;
+    height: 70%;
     border-bottom: 2px solid white;
 }
 
@@ -13,7 +13,7 @@
     color: white;
     width: 200px;
     outline: none;
-    padding: 5px 0;
+    padding: 2px 0px;
     font-size: 20px;
     margin: 5px;
     cursor: pointer;
