@@ -1,0 +1,31 @@
+.WelcomeModal {
+    top:0;
+    position: fixed;
+    z-index: 250;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-out;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.658);
+    font-size: 16px;
+}
+
+.welcome_modal-enter-active {
+    opacity: 1;
+}
+
+.welcome_modal-exit-active {
+    font-size: 0px;
+    opacity: 0;
+}
+
+@media (max-width: 500px) {
+    .welcome_modal-exit-active {
+        font-size: 20px;
+        opacity: 0;
+    }
+}

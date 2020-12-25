@@ -14,13 +14,13 @@ const backdrop = (props) => {
 
     return (
         <CSSTransition
-            in={props.show || !props.close}
+            in={props.show || props.openModalMovie}
             timeout={timings}
             unmountOnExit
             mountOnEnter
             classNames="slide"
         >
-            <div className="Backdrop" onClick={!props.close ? props.clearSelection : props.closeModal}></div>
+            <div className="Backdrop" onClick={props.openModalMovie ? props.clearSelection : props.closeModal}></div>
         </CSSTransition>
     );
 };
@@ -28,7 +28,7 @@ const backdrop = (props) => {
 const mapStateToProps = state => {
     return {
         id: state.selectedMovie.id,
-        close: state.selectedMovie.close,
+        openModalMovie: state.selectedMovie.openModal,
     }
 }
 
