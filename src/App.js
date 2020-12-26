@@ -12,7 +12,7 @@ import * as actions from "./store/actions/genres";
 const App = (props) => {
     const [showSideDrawer, setShowSideDrawer] = useState(false);
     const {fetchGenres} = props;
-    const [showWelcome, setShowWelcome] = useState(true);
+    const [showWelcome, setShowWelcome] = useState(!(localStorage.getItem("visited") === "true"));
 
     useEffect(() => {
         fetchGenres();
@@ -26,9 +26,14 @@ const App = (props) => {
         setShowSideDrawer(true);
     };
 
+    const closeWelcomeModal = () => {
+        localStorage.setItem("visited", "true");
+        setShowWelcome(!showWelcome);
+    }
+
     return (
         <div className="App">
-            <WelcomeModal showWelcome={showWelcome} closeWelcome={() => setShowWelcome(!showWelcome)}/>
+            <WelcomeModal showWelcome={showWelcome} closeWelcome={closeWelcomeModal}/>
             <Nav show={showSideDrawer} showSideDrawer={showModal} closeSideDrawer={closeModal}/>
             <SelectedFilm />
             <Films />
